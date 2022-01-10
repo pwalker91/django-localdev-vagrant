@@ -1,0 +1,12 @@
+# DB Dump files
+docker/dbinit/mysql/*
+!docker/dbinit/mysql/*-keepme.sql
+
+# Vagrant files
+.vagrant
+
+# Python Cache files
+*.pyc
+
+# Mac files
+.DS_Store
