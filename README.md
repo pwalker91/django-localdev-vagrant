@@ -29,7 +29,7 @@ Yes, a better solution would be to put **all** of this into a collection of Dock
     There is [some virtualization software](https://github.com/hashicorp/vagrant/issues/12518) for M1 processors, but most don't have a [Vagrant Plugin](https://github.com/hashicorp/vagrant/issues/12518) yet.
 - [ ] Redo `install` and `configure` bash scripts as Ansible playbooks.
 
-
+----
 
 ## Installation
 
@@ -60,13 +60,13 @@ For this example repository, I am going to use the [Sakila Sample Database](http
 You will need to rename the files so that they are executed in the correct order when the Docker Container starts up.
     - Rename `sakila-schema.sql` to `03-sakila-schema.sql`.
     - Rename `sakila-data.sql` to `04-sakila-data.sql`.
-> !! NOTE !!<br>
-> If you are reusing this project for your own environment and want to commit any SQL files you place in the directory, end the filename with `-keepme.sql`. The `.gitignore` file is currently configured to ignore any SQL files that do not end this way.
+    > !! NOTE !!<br>
+    > If you are reusing this project for your own environment and want to commit any SQL files you place in the directory, end the filename with `-keepme.sql`. The `.gitignore` file is currently configured to ignore any SQL files that do not end this way.
 
 
 #### Django Setup
 
-> This sample Django project is using Django 4, and will depend on Python version 3.9.
+_This sample Django project is using Django 4, and will depend on Python version 3.9._
 
 5. There is no extra setup needed of the included Django project, `example_django`. It really doesn't do much. The intention is to simply show a Django server running and consuming data from the MySQL and LocalStack Docker Containers.<br>
 If you need special configuration of server settings, consider modifying the `provision/install.sh` and `provision.configure.sh` scripts. For example, the function `set_environment_files` in `provision/install.sh` add content to the vagrant user's `~/.profile` file, so that some environment variables are defined whenever the user logs in.
@@ -99,11 +99,9 @@ Use the `vagrant ssh` command to connect to the VM and run the following command
     ./manage.py runserver 0:8000
     ```
 
-----
-
 **And with that, your local development instance of a Django server is now up and running!**
 
-
+----
 
 ### Suspending/Resuming your LocalDev
 
