@@ -56,4 +56,4 @@ main() {
     create_django_venv
 }
 
-# main
+main
