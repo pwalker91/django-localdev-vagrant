@@ -84,7 +84,7 @@ Once the VM has fully initialized, follow the steps below to complete the steps 
 7. Open a new Terminal window and navigate to the Vagrant home.<br>
 Use the `vagrant ssh` command to connect to the VM and run the following commands:
     ```bash
-    cd ~/docker
+    go-docker
     docker-compose up
     ```
     **Wait for the initialization of all Containers to fully complete** before continuing to the next step.<br>
@@ -93,9 +93,7 @@ Use the `vagrant ssh` command to connect to the VM and run the following command
 8. Open another Terminal window and navigate to the Vagrant home.<br>
 Use the `vagrant ssh` command to connect to the VM and run the following commands:
     ```bash
-    cd ~/chatbot/chatproj
-    workon chatbot
-
+    go-django
     ./manage.py runserver 0:8000
     ```
 
